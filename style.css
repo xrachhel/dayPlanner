@@ -1,0 +1,28 @@
+.top{
+    text-align: center;
+}
+hr{
+    border: 10px solid black;
+}
+.day{
+    display: block;
+    margin: 50px 200px 50px 200px;
+}
+.time{
+    border-top: 2px solid grey;
+    border-right: 2px solid grey;
+    padding: 20px;
+}
+.input{
+    background-color:#B6B3B2;
+    height: 65px;
+    width: 890px;
+    position: absolute;
+    left: 0px;
+}
+.btn-info{
+    padding: 16px;
+    position: absolute;
+    left: 0px;
+    margin-left: 0;
+}
