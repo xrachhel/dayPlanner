@@ -3,13 +3,13 @@ $(document).ready(function(){
     console.log(moment())
     console.log(moment().format())
 
-    $("#dateTime").text(moment().format("MMMM Do YYYY h:mm:ss a"))
+    $("#dateTime").text(moment().format("MMMM Do YYYY"))
     
     getTodo()
-    $(".save").on("click", function(event){
+    $(".saveBtn").on("click", function(event){
         event.preventDefault()
        
-        var todo = $("#box").val()
+        var todo = $("#9").val()
         localStorage.setItem("todo", todo)
         getTodo()
     })
@@ -17,14 +17,14 @@ $(document).ready(function(){
     function getTodo(){
         var storedTodos = localStorage.getItem("todo")
         
-        $("#box").val(storedTodos) 
+        $("#9").val(storedTodos) 
     }
 //----------------------------------
     getTodoOne()
-    $(".save").on("click", function(event){
+    $(".saveBtn").on("click", function(event){
         event.preventDefault()
        
-        var todo = $("#box1").val()
+        var todo = $("#10").val()
         localStorage.setItem("todo1", todo)
         getTodoOne()
     })
@@ -32,14 +32,14 @@ $(document).ready(function(){
     function getTodoOne(){
         var storedTodos = localStorage.getItem("todo1")
         
-        $("#box1").val(storedTodos) 
+        $("#10").val(storedTodos) 
     }
 //----------------------------------
     getTodoTwo()
-    $(".save").on("click", function(event){
+    $(".saveBtn").on("click", function(event){
         event.preventDefault()
        
-        var todo = $("#box2").val()
+        var todo = $("#11").val()
         localStorage.setItem("todo2", todo)
         getTodoOne()
     })
@@ -47,14 +47,14 @@ $(document).ready(function(){
     function getTodoTwo(){
         var storedTodos = localStorage.getItem("todo2")
         
-        $("#box2").val(storedTodos) 
+        $("#11").val(storedTodos) 
     }
 //----------------------------------
     getTodoThree()
-    $(".save").on("click", function (event) {
+    $(".saveBtn").on("click", function (event) {
         event.preventDefault()
 
-        var todo = $("#box3").val()
+        var todo = $("#12").val()
         localStorage.setItem("todo3", todo)
         getTodoThree()
     })
@@ -62,14 +62,14 @@ $(document).ready(function(){
     function getTodoThree() {
         var storedTodos = localStorage.getItem("todo3")
 
-        $("#box3").val(storedTodos)
+        $("#12").val(storedTodos)
     }
 //----------------------------------
     getTodoFour()
-    $(".save").on("click", function (event) {
+    $(".saveBtn").on("click", function (event) {
         event.preventDefault()
 
-        var todo = $("#box4").val()
+        var todo = $("#13").val()
         localStorage.setItem("todo4", todo)
         getTodoFour()
     })
@@ -77,14 +77,14 @@ $(document).ready(function(){
     function getTodoFour() {
         var storedTodos = localStorage.getItem("todo4")
 
-        $("#box4").val(storedTodos)
+        $("#13").val(storedTodos)
     }
 //----------------------------------
     getTodoFive()
-    $(".save").on("click", function (event) {
+    $(".saveBtn").on("click", function (event) {
         event.preventDefault()
 
-        var todo = $("#box5").val()
+        var todo = $("#14").val()
         localStorage.setItem("todo5", todo)
         getTodoFive()
     })
@@ -92,14 +92,14 @@ $(document).ready(function(){
     function getTodoFive() {
         var storedTodos = localStorage.getItem("todo5")
 
-        $("#box5").val(storedTodos)
+        $("#14").val(storedTodos)
     }
 //----------------------------------
     getTodoSix()
-    $(".save").on("click", function (event) {
+    $(".saveBtn").on("click", function (event) {
         event.preventDefault()
 
-        var todo = $("#box6").val()
+        var todo = $("#15").val()
         localStorage.setItem("todo6", todo)
         getTodoSix()
     })
@@ -107,14 +107,14 @@ $(document).ready(function(){
     function getTodoSix() {
         var storedTodos = localStorage.getItem("todo6")
 
-        $("#box6").val(storedTodos)
+        $("#15").val(storedTodos)
     }
 //----------------------------------
     getTodoSeven()
-    $(".save").on("click", function (event) {
+    $(".saveBtn").on("click", function (event) {
         event.preventDefault()
 
-        var todo = $("#box7").val()
+        var todo = $("#16").val()
         localStorage.setItem("todo7", todo)
         getTodoSeven()
     })
@@ -122,14 +122,14 @@ $(document).ready(function(){
     function getTodoSeven() {
         var storedTodos = localStorage.getItem("todo7")
 
-        $("#box7").val(storedTodos)
+        $("#16").val(storedTodos)
     }
 //----------------------------------
     getTodoEight()
-    $(".save").on("click", function (event) {
+    $(".saveBtn").on("click", function (event) {
         event.preventDefault()
 
-        var todo = $("#box8").val()
+        var todo = $("#17").val()
         localStorage.setItem("todo8", todo)
         getTodoEight()
     })
@@ -137,13 +137,27 @@ $(document).ready(function(){
     function getTodoEight() {
         var storedTodos = localStorage.getItem("todo8")
 
-        $("#box8").val(storedTodos)
+        $("#17").val(storedTodos)
     }
 
     
-
+var time = ["9", "10", "11", "12", "13", "14", "15", "16", "17"]
     
-
+function currentTime(){
+    var current = moment().format("H")
+    for (var i = 0; i < time.length; i++){
+    if(parseInt(time[i]) > current){
+        $("#" + time[i]).attr("style", "background-color: green")
+    }
+    else if(parseInt(time[i]) == current){
+        $("#" + time[i]).attr("style", "background-color: red")
+    }
+    else if(parseInt(time[i]) < current){
+        $("#" + time[i]).attr("style", "background-color: grey")
+    }
+    }
+}
+currentTime()
 
 
 
