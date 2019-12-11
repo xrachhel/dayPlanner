@@ -1,4 +1,4 @@
-# dayPlanner
+# Day Planner
 
 For this homework, we had to create a calendar application that allows users to save events for each hour of the workday, and save it so that it appears even if the page is refreshed. The application tells the user the current date at the very top, and each hour is color coded to reflect what time of day it is. Grey represents time that has passed, red represents the current time, and green respresents future time. 
 ## Screenshot 
