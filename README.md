@@ -5,17 +5,17 @@ This calendar application allows users to save events for each hour of the workd
 ## Screenshot 
 ![site](screenshot.png)
 
-## Built With
+## Deployed Link
+
+[See Live Site](https://xrachhel.github.io/dayPlanner/)
+
+## Technologies Used
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): used for structuring and creating elements on the DOM
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS): used to style html elements on the page
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): used to create responsive, interactive elements on the page
 * [Jquery](https://jquery.com/): JavaScript library that simplifies HTML DOM tree traversal and manipulation
 * [Moment.js](https://momentjs.com/): JavaScript library to parse, validate, manipulate, and display dates and times
-
-## Deployed Link
-
-* [See Live Site](https://xrachhel.github.io/dayPlanner/)
 
 ## Code snippet 
 ```html
@@ -45,4 +45,4 @@ Rachel Yeung
 
 - [Portfolio](https://rachelyeung.herokuapp.com/)
 - [Github](https://github.com/xrachhel/passwordGenerator)
-- [LinkedIn](https://www.linkedin.com/)
+- [LinkedIn](https://www.linkedin.com/in/rachel-yeung-814986159/)
