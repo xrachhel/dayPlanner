@@ -1,6 +1,6 @@
 # Day Planner
 
-For this homework, we had to create a calendar application that allows users to save events for each hour of the workday, and save it so that it appears even if the page is refreshed. The application tells the user the current date at the very top, and each hour is color coded to reflect what time of day it is. Grey represents time that has passed, red represents the current time, and green respresents future time. 
+This calendar application allows users to save events for each hour of the workday, and save it so that it appears even if the page is refreshed. The calendar tells the user the current date at the very top, and each hour is color coded to reflect what time of day it is. Grey represents time that has passed, red represents the current time, and green respresents future time. 
 ## Screenshot 
 ![site](screenshot.png)
 
@@ -45,4 +45,4 @@ function currentTime(){
 }
 currentTime()
 ```
-This was the function i used to set the color of the input boxes based on the time of day. I created an array of the 'hour' in military time, which were the ids i had set for each individual input box in my HTML code. I created the function currentTime(), which would control the background colors of the input boxes. I set a variable 'current' as the current time and set it equal to the current time in military time in hours (this was done using moment.js). I then created a for loop that would iterate through the array i created earlier. I then created 3 conditional statements, comparing the 'time' in my array with the current hour. Since my array consisted of strings, i had to parseInt() them to make sure that they were interpreted as integers. Inside my conditional statement, i grabbed the input box using the Id, and attributed a background color based on whichever condition it met. 
+This was the function used to set the color of the input boxes based on the time of day. An array of the 'hour' in military time was created, which were the ids set for each individual input box in the HTML code. The function currentTime() would control the background colors of the input boxes. The variable 'current' is set as the current time and equal to the current time in military time in hours (this was done using moment.js). A for loop that would iterate through the array and 3 conditional statements would compare the 'time' in the array with the current hour. Since the array consisted of strings, parseInt() had to be called to make sure that they were interpreted as integers. Inside the conditional statement, the input box was grabbed using the Id, and attributed a background color based on whichever condition it met. 
